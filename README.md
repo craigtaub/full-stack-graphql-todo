@@ -11,6 +11,7 @@
   - comes with test setups too
 - Absinthe 
   - GraphQl toolkit
+  - GraphQl documentation generated based on schemas (via introspection)
 - Ecto 
   - DSL for interacting with dbs. Adapters for many SQL-based dbs.
   - Seeds
@@ -29,4 +30,19 @@
 - `#brew install elixir`
 - `#brew install postgres`
 
-- https://www.howtographql.com/graphql-elixir/1-getting-started/ -> a guide
+#### Elixir Walkthrough
+- https://www.howtographql.com/graphql-elixir/1-getting-started/
+- added Pheonix
+- added Postrges table + seeded
+- added basic resolver
+- step 1+2 done, mutations next
+- Query:
+```
+{
+  allLinks {
+    id
+    url
+    description
+  }
+}
+```
