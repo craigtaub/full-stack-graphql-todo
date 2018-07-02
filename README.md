@@ -5,6 +5,7 @@
 - apollo-boost - lots out the box
 - `#yarn add apollo-boost graphql-tag graphql react-apollo --save`
 - `#create-react-app` + `#npm run eject`
+- SETUP -> `#yarn`
 
 ### Backend
 - Elixir, Pheonix, Absinthe, Postgres
@@ -32,6 +33,7 @@
   - SQL
 - `#brew install elixir`
 - `#brew install postgres`
+- SETUP -> `#mix deps.get && mix ecto.setup`
 
 #### Elixir Walkthrough
 - https://www.howtographql.com/graphql-elixir/1-getting-started/
