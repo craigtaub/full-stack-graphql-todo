@@ -3,6 +3,8 @@
 ### Frontend
 - `#create-react-app`
 - `#npm run eject`
+- styled-components
+- Apollo
 
 ### Backend - Elixir
 - Pheonix 
