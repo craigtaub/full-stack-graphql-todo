@@ -40,7 +40,8 @@ defmodule Community.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:absinthe_ecto, "~> 0.1.0"},
-      {:absinthe_plug, "~> 1.3.0"}
+      {:absinthe_plug, "~> 1.3.0"},
+      {:cors_plug, "~> 1.5"}
     ]
   end
 

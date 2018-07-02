@@ -1,8 +1,10 @@
 defmodule CommunityWeb.Router do
   use CommunityWeb, :router
 
+
   pipeline :api do
     plug :accepts, ["json"]
+    plug CORSPlug
   end
 
   scope "/" do
