@@ -7,7 +7,7 @@
 - `#create-react-app` + `#npm run eject`
 
 ### Backend
-- Elixir + Pheonix
+- Elixir, Pheonix, Absinthe, Postgres
 - Pheonix 
   - web framework + generator
   - dictates file structure "seperation of concerns"
