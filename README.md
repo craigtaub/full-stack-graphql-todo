@@ -1,13 +1,13 @@
 # Full stack graphql TODO app
 
 ### Frontend
+- react, webpack, styled-components, graphql (Apollo), yarn, jest
+- apollo-boost - lots out the box
+- `#yarn add apollo-boost graphql-tag graphql react-apollo --save`
 - `#create-react-app` + `#npm run eject`
-- styled-components
-- Apollo
-  - apollo-boost - lots out the box
-  - `#yarn add apollo-boost graphql-tag graphql --save`
 
-### Backend - Elixir
+### Backend
+- Elixir + Pheonix
 - Pheonix 
   - web framework + generator
   - dictates file structure "seperation of concerns"
@@ -49,5 +49,6 @@
   }
 }
 ```
+
 #### ISSUES
 - Elixir needed CORS (easy via https://github.com/mschae/cors_plug)
