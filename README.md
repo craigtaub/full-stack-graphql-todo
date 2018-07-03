@@ -39,8 +39,7 @@
 - https://www.howtographql.com/graphql-elixir/1-getting-started/
 - added Pheonix
 - added Postrges table + seeded
-- added basic resolver
-- step 1+2 done, mutations next
+- added query + mutation resolver
 - Query:
 ```
 {
