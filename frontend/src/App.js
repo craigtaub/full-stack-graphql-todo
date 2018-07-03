@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import Title from './Title';
 import './App.css';
 import List from './List';
+import Add from './Add';
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
         </header>
         <Title />
         <List />
+        <Add />
       </div>
     );
   }

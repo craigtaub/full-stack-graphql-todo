@@ -51,6 +51,19 @@
   }
 }
 ```
+- Mutation:
+```
+mutation {
+  createLink(
+    url: "http://npmjs.com/package/graphql-tools",
+    description: "Best Tools!",
+  ) {
+    id
+    url
+    description
+  }
+}
+```
 
 #### ISSUES
 - Elixir needed CORS (easy via https://github.com/mschae/cors_plug)
