@@ -20,7 +20,7 @@ export default () => (
       return (
         <ul>
           {data.allLinks.map(link => (
-            <li key={link.id} ><a href={link.url}>{link.description}</a></li>
+            <li key={link.id} ><a href={link.url}>{link.id} - {link.description}</a></li>
           ))}
         </ul>
       );

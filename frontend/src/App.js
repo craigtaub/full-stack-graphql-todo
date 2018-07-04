@@ -4,6 +4,7 @@ import Title from './Title';
 import './App.css';
 import List from './List';
 import Add from './Add';
+import Remove from './Remove';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
         <Title />
         <List />
         <Add />
+        <Remove />
       </div>
     );
   }
