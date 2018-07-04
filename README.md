@@ -8,7 +8,7 @@
 - SETUP -> `#yarn`
 
 ### Backend
-- Elixir, Pheonix, Absinthe, Postgres
+- Elixir, Pheonix, Ecto, Absinthe, Postgres
   - https://www.howtographql.com/graphql-elixir/1-getting-started/
 - Pheonix 
   - web framework + generator
