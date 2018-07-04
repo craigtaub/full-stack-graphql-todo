@@ -86,7 +86,8 @@ defmodule Community.News do
 
   """
   def delete_link(%Link{} = link) do
-    Repo.delete(link)
+    new_link = Repo.get!(Link, link.id) # type + id. using just id isnt correct datatype
+    Repo.delete(new_link)
   end
 
   @doc """

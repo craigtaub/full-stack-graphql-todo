@@ -50,7 +50,7 @@
   }
 }
 ```
-- Mutation:
+- Mutations:
 ```
 mutation {
   createLink(
@@ -60,6 +60,13 @@ mutation {
     id
     url
     description
+  }
+}
+mutation {
+  deleteLink(
+    id: 18
+  ) {
+    id
   }
 }
 ```
