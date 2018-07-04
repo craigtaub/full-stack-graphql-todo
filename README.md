@@ -9,14 +9,17 @@
 
 ### Backend
 - Elixir, Pheonix, Absinthe, Postgres
+  - https://www.howtographql.com/graphql-elixir/1-getting-started/
 - Pheonix 
   - web framework + generator
   - dictates file structure "seperation of concerns"
   - comes with test setups too
 - Absinthe 
+  - https://hexdocs.pm/absinthe/Absinthe.Schema.Notation.html
   - GraphQl toolkit
   - GraphQl documentation generated based on schemas (via introspection)
 - Ecto 
+  - https://hexdocs.pm/ecto/Ecto.Repo.html#content
   - DSL for interacting with dbs. Adapters for many SQL-based dbs.
   - Seeds
   - Migrations - used to modify your db schema over time. db-dependence
@@ -35,12 +38,7 @@
 - `#brew install postgres`
 - SETUP -> `#mix deps.get && mix ecto.setup`
 
-#### Elixir Walkthrough
-- https://www.howtographql.com/graphql-elixir/1-getting-started/
-- added Pheonix
-- added Postrges table + seeded
-- added query + mutation resolver
-- Query:
+Query:
 ```
 {
   allLinks {
@@ -50,7 +48,7 @@
   }
 }
 ```
-- Mutations:
+Mutations:
 ```
 mutation {
   createLink(
