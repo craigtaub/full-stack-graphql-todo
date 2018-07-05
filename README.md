@@ -26,12 +26,17 @@
   - GraphQl documentation generated based on schemas (via introspection)
 - Ecto 
   - https://hexdocs.pm/ecto/Ecto.Repo.html#content
+  - https://hexdocs.pm/ecto/Ecto.Adapters.SQL.Sandbox.html#content
   - DSL for interacting with dbs. Adapters for many SQL-based dbs.
   - Seeds
   - Migrations - used to modify your db schema over time. db-dependence
     - `up` is update, `down` is rollback
     - provides mix tasks
       - `mix ecto.setup` -> creates `repo/migrations/*.exs`
+  - Testing
+    - use sandbox adapter - `Ecto.Adapters.SQL.Sandbox`
+    - don't mock. Contracts via Adapters
+    - use Adapter to setup data for the test
 - Mix 
   - environment toolkit
   - mix.exs -> dependencies file
@@ -78,8 +83,9 @@ mutation {
 ```
 
 #### TODO 
-- Elixir tests: resolver, schema
+- Elixir tests: schema (Absinthe)
 
 #### ISSUES
 - Elixir needed CORS (easy via https://github.com/mschae/cors_plug)
 - Type for mutation->deleteLink (1. import 'Link' type into resolver. 2. get item before delete, for 'id')
+- Giving Adapter of a test Repo to control method responses, doesn't work.

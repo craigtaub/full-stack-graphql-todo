@@ -3,8 +3,9 @@ defmodule CommunityWeb.NewsResolver do
   alias Community.News
   alias Community.News.Link
 
-  # def testme(text) do
-  #   text
+  # def testme(_root, _args, _info) do
+  #   IO.inspect _args
+  #   "yo"
   # end 
 
   def all_links(_root, _args, _info) do
