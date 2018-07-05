@@ -15,5 +15,6 @@ config :community, Community.Repo,
   username: "postgres",
   password: "postgres",
   database: "community_test",
-  hostname: "localhost",
+  hostname: "192.168.99.100",
+  port: "32794",
   pool: Ecto.Adapters.SQL.Sandbox

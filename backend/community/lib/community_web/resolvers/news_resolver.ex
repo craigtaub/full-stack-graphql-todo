@@ -3,6 +3,10 @@ defmodule CommunityWeb.NewsResolver do
   alias Community.News
   alias Community.News.Link
 
+  # def testme(text) do
+  #   text
+  # end 
+
   def all_links(_root, _args, _info) do
     links = News.list_links()
     {:ok, links}

@@ -36,6 +36,8 @@
   - environment toolkit
   - mix.exs -> dependencies file
   - `mix deps.get` -> use file + install
+  - testing `mix tests`
+    - uses `test.exs` config for stuff (db).
 - Postgress 
   - docker image + settings in `dev.exs`
   - pgAdmin ui tool
@@ -74,6 +76,9 @@ mutation {
   }
 }
 ```
+
+#### TODO 
+- Elixir tests: resolver, schema
 
 #### ISSUES
 - Elixir needed CORS (easy via https://github.com/mschae/cors_plug)
