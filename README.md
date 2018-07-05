@@ -11,6 +11,7 @@
   - install + lockfile easy
   - tests use watcher by default, run very fast, docs good
   - paired with Apollo very easily
+  - testing `yarn test`
 - SETUP -> `#yarn`
 
 ### Backend
