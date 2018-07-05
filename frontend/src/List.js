@@ -2,7 +2,7 @@ import React from 'react';
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
 
-const GET_LINKS = gql`
+export const GET_LINKS = gql`
   {
     allLinks {
       id
@@ -20,7 +20,7 @@ export default () => (
       return (
         <ul>
           {data.allLinks.map(link => (
-            <li key={link.id} ><a href={link.url}>{link.id} - {link.description}</a></li>
+            <li className="list-item" key={link.id} ><a href={link.url}>{link.id} - {link.description}</a></li>
           ))}
         </ul>
       );
