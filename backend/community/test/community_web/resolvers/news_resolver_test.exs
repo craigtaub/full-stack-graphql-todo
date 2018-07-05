@@ -14,7 +14,7 @@ defmodule CommunityWeb.NewsResolverTest do
     #   assert NewsResolver.testme("when") == "when"
     # end
 
-    test "all_links - should fetch and return all inserted links" do
+    test "all_links/3 should fetch and return all inserted links" do
       # Explicitly get a connection before each test
       :ok = Ecto.Adapters.SQL.Sandbox.checkout(Repo)
       
