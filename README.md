@@ -21,6 +21,10 @@
   - web framework + generator
   - dictates file structure "seperation of concerns"
   - comes with test setups too
+  - Testing 
+    - endpoint testing with  `Pheonix.ConnTest` 
+    - imports all functions like real conn
+    - https://hexdocs.pm/phoenix/Phoenix.ConnTest.html 
 - Absinthe 
   - https://hexdocs.pm/absinthe/Absinthe.Schema.Notation.html
   - GraphQl toolkit
@@ -82,9 +86,6 @@ mutation {
   }
 }
 ```
-
-#### TODO 
-- Elixir tests: schema (Absinthe)
 
 #### ISSUES
 - Elixir needed CORS (easy via https://github.com/mschae/cors_plug)
