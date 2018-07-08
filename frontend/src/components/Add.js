@@ -1,7 +1,7 @@
 import React from 'react';
 import gql from "graphql-tag";
 import { Mutation } from "react-apollo";
-import { GET_LINKS } from './List';
+import { addUpdate } from '../updaters';
 
 export const ADD_LINK = gql`
   mutation addLink($url: String!, $desc: String!) {
@@ -22,13 +22,7 @@ export default () => {
   return (
     <Mutation 
       mutation={ADD_LINK}
-      update={(cache, { data }) => {
-        const { allLinks } = cache.readQuery({ query: GET_LINKS })
-        cache.writeQuery({
-          query: GET_LINKS,
-          data: { allLinks: allLinks.concat([data.createLink])},
-        })
-      }}
+      update={addUpdate}
     >
       {(addLink, { data, loading, error }) => (
         <div>

@@ -1,17 +1,7 @@
 import React from 'react';
-import gql from "graphql-tag";
 import { Query, Mutation } from "react-apollo";
-import { REMOVE_LINK } from './Remove';
-
-export const GET_LINKS = gql`
-  {
-    allLinks {
-      id
-      url
-      description
-    }
-  }
-`;
+import { removeUpdate } from '../updaters';
+import { GET_LINKS, REMOVE_LINK } from '../queries';
 
 const GetLinks = ({ removeLink }) => (
   <Query query={GET_LINKS}>
@@ -43,14 +33,7 @@ const GetLinks = ({ removeLink }) => (
 const RemoveLinks = () => (
   <Mutation 
     mutation={REMOVE_LINK}
-    update={(cache, { data }) => {
-      const { allLinks } = cache.readQuery({ query: GET_LINKS })
-      const updatedLinks = allLinks.filter(item => item.id !== data.deleteLink.id);
-      cache.writeQuery({
-        query: GET_LINKS,
-        data: { allLinks: updatedLinks },
-      });
-    }}
+    update={removeUpdate}
   >
   {(removeLink, { data, loading, error }) => (
       <GetLinks removeLink={removeLink} />

@@ -1,17 +1,6 @@
 import React from 'react';
-import gql from "graphql-tag";
-import { GET_LINKS } from './List';
 import { Mutation } from "react-apollo";
-
-export const REMOVE_LINK = gql`
-  mutation removeLink($id: String!) {
-    deleteLink(
-      id: $id
-    ) {
-      id
-    }
-  }
-`
+import { REMOVE_LINK, GET_LINKS } from './queries';
 
 // Manual Remove component
 export default () => {
