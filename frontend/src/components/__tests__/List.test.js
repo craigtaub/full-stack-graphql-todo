@@ -1,5 +1,6 @@
-import List, { GET_LINKS } from '../List';
-import setupMockedContainer from '../../tests/test-setup';
+import List from '../List';
+import { GET_LINKS } from '../../queries';
+import setupMockedContainer from '../../../tests/test-setup';
 
 describe('List', () => {
   it('render id and description for each list item', async () => {

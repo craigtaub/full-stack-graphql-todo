@@ -1,5 +1,5 @@
 import App from '../App';
-import setupMockedContainer from '../../tests/test-setup';
+import setupMockedContainer from '../../../tests/test-setup';
 
 describe('App', () => {
   it('renders without crashing', async () => {
