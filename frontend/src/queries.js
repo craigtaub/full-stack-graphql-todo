@@ -19,3 +19,16 @@ export const REMOVE_LINK = gql`
     }
   }
 `
+
+export const ADD_LINK = gql`
+  mutation addLink($url: String!, $desc: String!) {
+    createLink(
+      url: $url,
+      description: $desc,
+    ) {
+      id
+      url
+      description
+    }
+  }
+`

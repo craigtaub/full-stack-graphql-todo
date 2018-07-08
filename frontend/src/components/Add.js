@@ -1,20 +1,7 @@
 import React from 'react';
-import gql from "graphql-tag";
 import { Mutation } from "react-apollo";
 import { addUpdate } from '../updaters';
-
-export const ADD_LINK = gql`
-  mutation addLink($url: String!, $desc: String!) {
-    createLink(
-      url: $url,
-      description: $desc,
-    ) {
-      id
-      url
-      description
-    }
-  }
-`
+import { ADD_LINK } from '../queries';
 
 export default () => {
   let urlInput, descInput;
