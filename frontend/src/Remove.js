@@ -1,5 +1,6 @@
 import React from 'react';
 import gql from "graphql-tag";
+import { GET_LINKS } from './List';
 import { Mutation } from "react-apollo";
 
 const ADD_LINK = gql`
@@ -16,7 +17,17 @@ export default () => {
   let idInput;
 
   return (
-    <Mutation mutation={ADD_LINK}>
+    <Mutation 
+      mutation={ADD_LINK}
+      update={(cache, { data }) => {
+        const { allLinks } = cache.readQuery({ query: GET_LINKS })
+        const updatedLinks = allLinks.filter(item => item.id !== data.deleteLink.id);
+        cache.writeQuery({
+          query: GET_LINKS,
+          data: { allLinks: updatedLinks },
+        });
+      }}
+    >
       {(addLink, { data, loading, error }) => (
         <div>
           <form

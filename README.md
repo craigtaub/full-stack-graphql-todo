@@ -91,3 +91,4 @@ mutation {
 - Elixir needed CORS (easy via https://github.com/mschae/cors_plug)
 - Type for mutation->deleteLink (1. import 'Link' type into resolver. 2. get item before delete, for 'id')
 - Giving Adapter of a test Repo to control method responses, doesn't work.
+- react-apollo Mutation wudnt trigger Query so page would need refresh for content. Fix = Imperative Store API 'update'.
