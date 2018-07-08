@@ -3,7 +3,7 @@ import gql from "graphql-tag";
 import { Mutation } from "react-apollo";
 import { GET_LINKS } from './List';
 
-const ADD_LINK = gql`
+export const ADD_LINK = gql`
   mutation addLink($url: String!, $desc: String!) {
     createLink(
       url: $url,

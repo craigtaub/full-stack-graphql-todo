@@ -3,7 +3,7 @@ import gql from "graphql-tag";
 import { GET_LINKS } from './List';
 import { Mutation } from "react-apollo";
 
-const ADD_LINK = gql`
+export const REMOVE_LINK = gql`
   mutation removeLink($id: String!) {
     deleteLink(
       id: $id
@@ -13,12 +13,13 @@ const ADD_LINK = gql`
   }
 `
 
+// Manual Remove component
 export default () => {
   let idInput;
 
   return (
     <Mutation 
-      mutation={ADD_LINK}
+      mutation={REMOVE_LINK}
       update={(cache, { data }) => {
         const { allLinks } = cache.readQuery({ query: GET_LINKS })
         const updatedLinks = allLinks.filter(item => item.id !== data.deleteLink.id);
@@ -28,12 +29,12 @@ export default () => {
         });
       }}
     >
-      {(addLink, { data, loading, error }) => (
+      {(removeLink, { data, loading, error }) => (
         <div>
           <form
             onSubmit={e => {
               e.preventDefault();
-              addLink({ variables: { id: idInput.value } });
+              removeLink({ variables: { id: idInput.value } });
               idInput.value = "";
             }}
           >
