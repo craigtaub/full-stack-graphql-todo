@@ -103,6 +103,14 @@ mutation {
   - `#docker-compose up (--build)` -> run composer (rebuild)
   - `#docker-compose rm` -> rm 
 - Kitamatic works with them now (start, stop, screenshots)
+- help 
+  - https://docs.docker.com/compose/rails/#build-the-project
+  - https://github.com/craigtaub/docker-nginx-webpack -> using 'services' name
+
+### TODO
+- docker 
+  - migrate DB script
+  - connect Elixir -> Postgres
 
 #### ISSUES
 - Elixir needed CORS (easy via https://github.com/mschae/cors_plug)
