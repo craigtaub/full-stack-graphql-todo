@@ -113,6 +113,7 @@ mutation {
 - docker 
   - migrate DB script
   - connect Elixir -> Postgres
+  - TRIED point Postgres db already running
 
 #### ISSUES
 - Elixir needed CORS (easy via https://github.com/mschae/cors_plug)
