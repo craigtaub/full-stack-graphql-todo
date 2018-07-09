@@ -1,6 +1,13 @@
 .App {
   text-align: center;
 }
+ul li {
+  list-style: none;
+}
+
+input {
+  margin: 5px;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
