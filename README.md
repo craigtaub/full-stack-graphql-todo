@@ -37,7 +37,9 @@
   - Migrations - used to modify your db schema over time. db-dependence
     - `up` is update, `down` is rollback
     - provides mix tasks
-      - `mix ecto.setup` -> creates `repo/migrations/*.exs`
+      - generate migration file `repo/migrations/*.exs`
+      - `mix ecto.setup` -> ? perhaps both below
+      - `mix ecto.create && mix ecto.migrate` -> create database for Community repo + run migrations to create table
   - Testing
     - use sandbox adapter - `Ecto.Adapters.SQL.Sandbox`
     - don't mock. Contracts via Adapters
