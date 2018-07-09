@@ -8,7 +8,7 @@ Enzyme.configure({ adapter: new Adapter() });
 export default async function setupMockedContainer(Container, query, result) {
   const mocks = [
     {
-      request: { query: query },
+      request: { query },
       result: {
         data: {
           ...result
