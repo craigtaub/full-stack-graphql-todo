@@ -87,8 +87,26 @@ mutation {
 }
 ```
 
+### Docker setup
+- `192.168.99.100:3000` -> APP
+- docker-compose top level
+- Dockerfiles for each app
+- PLAN. (FE) JS -> (BE) Elixir -> (DB) Postgress
+- `#docker ps` -> check running apps
+- `#docker images` -> check images
+- via Dockerfile
+  - `#docker build -t craigtaub/frontend .` -> build
+  - `#docker run -p 3000:3000 -d craigtaub/frontend` -> run
+  - `#docker exec -it <container id> /bin/bash` -> enter container
+  - `#docker stop <container id>` -> stop container
+- via composer
+  - `#docker-compose up (--build)` -> run composer (rebuild)
+  - `#docker-compose rm` -> rm 
+- Kitamatic works with them now (start, stop, screenshots)
+
 #### ISSUES
 - Elixir needed CORS (easy via https://github.com/mschae/cors_plug)
 - Type for mutation->deleteLink (1. import 'Link' type into resolver. 2. get item before delete, for 'id')
 - Giving Adapter of a test Repo to control method responses, doesn't work.
 - react-apollo Mutation wudnt trigger Query so page would need refresh for content. Fix = Imperative Store API 'update'.
+- `docker-compose up` failure -> `eval "$(docker-machine env default)"`

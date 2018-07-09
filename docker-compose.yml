@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+    - 3000:3000
+    volumes:
+    - ./frontend:/usr/src/app/:rw
+    environment:
+    - NODE_ENV=dev
