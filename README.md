@@ -14,6 +14,7 @@ Run with docker container orchestration:
     ./docker-run.sh
 
 Urls:
+
 - frontend = http://192.168.99.100:3000/
 - backend = http://192.168.99.100:4000/graphiql
 - Postgres = http://192.168.99.100:5432
