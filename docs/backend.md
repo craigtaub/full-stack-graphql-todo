@@ -34,7 +34,7 @@
   - `#mix phx.new community` -> bootstrap app with generator
   - mix.exs -> dependencies file
   - `mix deps.get` -> use file + install
-  - testing `mix tests`
+  - testing `mix test`
     - uses `test.exs` config for stuff (db).
 - Postgress 
   - docker image + settings in `dev.exs`
