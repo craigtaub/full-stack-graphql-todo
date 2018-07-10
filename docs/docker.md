@@ -1,7 +1,7 @@
 # Docker setup
 
 - `192.168.99.100:3000` -> APP
-- docker-compose top level
+- docker-compose top level (for multi-container docker apps)
 - Dockerfiles for each app
 - PLAN. (FE) JS -> (BE) Elixir -> (DB) Postgress
 - `#docker ps` -> check running apps
