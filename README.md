@@ -46,6 +46,7 @@
     - use Adapter to setup data for the test
 - Mix 
   - environment toolkit
+  - `#mix phx.new community` -> bootstrap app with generator
   - mix.exs -> dependencies file
   - `mix deps.get` -> use file + install
   - testing `mix tests`
@@ -97,23 +98,19 @@ mutation {
 - `#docker ps` -> check running apps
 - `#docker images` -> check images
 - via Dockerfile
+  - useful to run each by itself initially
   - `#docker build -t craigtaub/frontend .` -> build
   - `#docker run -p 3000:3000 -d craigtaub/frontend` -> run
   - `#docker exec -it <container id> /bin/bash` -> enter container
   - `#docker stop <container id>` -> stop container
 - via composer
-  - `#docker-compose up (--build)` -> run composer (rebuild)
-  - `#docker-compose rm` -> rm 
+  - `#docker-compose build` -> build images from composer
+  - `#docker-compose up` -> run images from composer 
+  - `#docker-compose rm` -> rm images
 - Kitamatic works with them now (start, stop, screenshots)
-- help 
-  - https://docs.docker.com/compose/rails/#build-the-project
-  - https://github.com/craigtaub/docker-nginx-webpack -> using 'services' name
 
 ### TODO
-- docker 
-  - migrate DB script
-  - connect Elixir -> Postgres
-  - TRIED point Postgres db already running
+- docker - no hardcoded ips/ports, use service name
 
 #### ISSUES
 - Elixir needed CORS (easy via https://github.com/mschae/cors_plug)
@@ -121,3 +118,4 @@ mutation {
 - Giving Adapter of a test Repo to control method responses, doesn't work.
 - react-apollo Mutation wudnt trigger Query so page would need refresh for content. Fix = Imperative Store API 'update'.
 - `docker-compose up` failure -> `eval "$(docker-machine env default)"`
+- docker create+migrate at build time when no db running. move to CMD time.
