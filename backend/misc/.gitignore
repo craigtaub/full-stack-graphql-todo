@@ -1,2 +1,7 @@
+# App artifacts
 /_build
+/deps
 /ebin
+
+# Dont want lots of noise if something changes
+/doc
