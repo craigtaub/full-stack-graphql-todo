@@ -1,14 +1,28 @@
-#elixir simple.exs
 
 defmodule Misc.Simple do
   def main do
     IO.puts("simple.main ran")
   end
 
+  @doc ~S"""
+  Appends `value` into the string
+
+  ## Examples
+
+      iex> Misc.Simple.process("some value")
+      {:ok, "add value = some value"}
+
+  """
   def process(value) do
-    "add value = #{value}"
+    {:ok, "add value = #{value}"}
   end
 end
+
+
+################ OLD ################################
+
+
+# elixir simple.exs
 
 # Simple.main
 

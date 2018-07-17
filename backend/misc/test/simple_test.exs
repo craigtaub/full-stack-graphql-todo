@@ -3,10 +3,12 @@
 # Code.load_file("simple.exs")
 
 defmodule Misc.SimpleTest do
-  alias Misc.Simple, as: Simple
   use ExUnit.Case, async: true
+  doctest Misc.Simple
+  alias Misc.Simple, as: Simple
+
   test "basic assert" do
-    IO.puts Simple.process "some"
+    IO.inspect Simple.process "some"
     assert true
   end
 
