@@ -12,6 +12,9 @@ defmodule Misc.Simple do
       iex> Misc.Simple.process("some value")
       {:ok, "add value = some value"}
 
+      iex> Misc.Simple.process("more")
+      {:ok, "add value = more"}
+
   """
   def process(value) do
     {:ok, "add value = #{value}"}
