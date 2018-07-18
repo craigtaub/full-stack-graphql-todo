@@ -20,7 +20,7 @@ describe('List', () => {
       const wrapped = await setupMockedContainer(List, GET_LINKS, stubData);
 
       expect(wrapped.find('.list-item').length).toBe(1);
-      expect(wrapped.find('.list-item').text()).toBe(`X- ${stubId} - ${stubDesc}`);
+      expect(wrapped.find('.list-item').text()).toBe(`X- ${stubDesc}`);
 
     })
 });

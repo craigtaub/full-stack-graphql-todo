@@ -21,7 +21,7 @@ const GetLinks = ({ removeLink }) => (
               e.preventDefault();
             }}
             >X</a>
-             - <a href={link.url}>{link.id} - {link.description}</a>
+             - <a href={link.url}>{link.description}</a>
           </li>
         ))}
       </ul>
