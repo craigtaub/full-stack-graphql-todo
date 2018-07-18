@@ -16,8 +16,6 @@ Run with docker container orchestration:
 Urls:
 
 - frontend = http://192.168.99.100:3000/
-- backend = http://192.168.99.100:4000/graphiql
-- Postgres = http://192.168.99.100:5432
+- backend = http://192.168.99.100:4000/graphiql (via service name `backend`)
+- Postgres = http://192.168.99.100:5432 (via service name `db`)
 
-### TODO
-- docker - no hardcoded ips/ports, use service name

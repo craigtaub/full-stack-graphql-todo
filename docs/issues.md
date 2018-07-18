@@ -6,3 +6,4 @@
 - react-apollo Mutation wudnt trigger Query so page would need refresh for content. Fix = Imperative Store API 'update'.
 - `docker-compose up` failure -> `eval "$(docker-machine env default)"`
 - docker create+migrate at build time when no db running. move to CMD time.
+- `react-create-app` once eject config is a mess, can't add server route - was easy add package.json `proxy`

@@ -17,3 +17,9 @@
   - `#docker-compose up` -> run images from composer 
   - `#docker-compose rm` -> rm images
 - Kitamatic works with them now (start, stop, screenshots)
+- Networking:
+  - Each container (server-side) sees itself as localhost 
+  - Docker uses an internal DNS
+  - So you can reference service by name in composer 
+  - i.e. service name `db` is `postgress://db` in container
+  - for FE good to proxy from FE->BE
